@@ -1,6 +1,7 @@
 package org.usfirst.frc.team219.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  *
@@ -20,6 +21,7 @@ public class StopWheels extends CommandBase {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	SmartDashboard.putString("Shooter", "Z z z");
     }
 
     // Make this return true when this Command no longer needs to run execute()

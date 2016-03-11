@@ -22,10 +22,10 @@ public class TurnWithVision extends CommandBase {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	if(vision.turnRight()==1){
-    		drivetrain.setTalonSpeed(-.2, -.2);
+    		drivetrain.setTalonSpeed(.2, .2);
     	}
     	else if(vision.turnRight()==-1){
-    		drivetrain.setTalonSpeed(.2, .2);
+    		drivetrain.setTalonSpeed(-.2, -.2);
     	}
     }
 

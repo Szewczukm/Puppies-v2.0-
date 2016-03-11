@@ -24,9 +24,9 @@ public class Vision extends Subsystem {
 	private double[] defaultValue = new double[0];
     
 	public Vision() {
-//		camera = CameraServer.getInstance();
-//		camera.setQuality(100);
-//		camera.startAutomaticCapture("cam1");
+		camera = CameraServer.getInstance();
+		camera.setQuality(100);
+		camera.startAutomaticCapture("cam1");
 	}
 		
 	public void post(){
