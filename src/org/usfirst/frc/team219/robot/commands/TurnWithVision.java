@@ -3,6 +3,8 @@ package org.usfirst.frc.team219.robot.commands;
 import org.usfirst.frc.team219.robot.RobotMap;
 import org.usfirst.frc.team219.robot.commands.CommandBase;
 
+import edu.wpi.first.wpilibj.Timer;
+
 
 /**
  *
@@ -30,23 +32,25 @@ public class TurnWithVision extends CommandBase {
     		drivetrain.setTalonSpeed(.2, .2);
     	}
     	else if(leftRight==-1){
-    		drivetrain.setTalonSpeed(-.2, -.2);
+    		drivetrain.setTalonSpeed(-.15, -.15);
     	}
     	currX = vision.getXVal();
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return ((vision.getXVal() <=330 && vision.getXVal()>=310) || (currX-startX >= -5 || currX-startX <=5));
+        return ((vision.getXVal() <=157 && vision.getXVal()>=135));
 		
     }
 
     // Called once after isFinished returns true
     protected void end() {
+    	drivetrain.setTalonSpeed(0, 0);
     }
 
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
+    	end();
     }
 }

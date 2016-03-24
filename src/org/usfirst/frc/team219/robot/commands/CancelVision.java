@@ -1,23 +1,20 @@
 package org.usfirst.frc.team219.robot.commands;
 
-import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
  *
  */
-public class Fire extends CommandBase {
+public class CancelVision extends CommandBase {
 
-    public Fire() {
+    public CancelVision() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
+    	requires(drivetrain);
     }
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	shooter.extend();
-    	Timer.delay(.5);
-    	shooter.retract();
     }
 
     // Called repeatedly when this Command is scheduled to run

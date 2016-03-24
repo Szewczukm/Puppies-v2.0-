@@ -17,7 +17,7 @@ public class StartWheels extends CommandBase {
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	shooter.setWheelSpeed(1,-1);
+    	shooter.setWheelSpeed(.8,-.8);
     }
 
     // Called repeatedly when this Command is scheduled to run
@@ -32,6 +32,7 @@ public class StartWheels extends CommandBase {
 
     // Called once after isFinished returns true
     protected void end() {
+    	SmartDashboard.putString("Shooter", "Z z z");
     	shooter.setWheelSpeed(0, 0);
     }
 

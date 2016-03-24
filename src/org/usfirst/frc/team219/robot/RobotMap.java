@@ -24,7 +24,7 @@ public class RobotMap {
 	public static final int SHOOTER_L = 5;
 	public static final int SHOOTER_R = 6;
 	
-	public static final int PIXEL_CONSTANT = 320;
+	public static final int PIXEL_CONSTANT = 140;
 	
 	public static final int SHOOTER_FORWARD = 0;
 	public static final int SHOOTER_REVERSE = 1;

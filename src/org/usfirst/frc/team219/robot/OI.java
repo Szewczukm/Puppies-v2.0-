@@ -1,5 +1,6 @@
 package org.usfirst.frc.team219.robot;
 
+import org.usfirst.frc.team219.robot.commands.CancelVision;
 import org.usfirst.frc.team219.robot.commands.Fire;
 import org.usfirst.frc.team219.robot.commands.StartWheels;
 import org.usfirst.frc.team219.robot.commands.StopWheels;
@@ -50,9 +51,9 @@ public class OI {
 		JoystickButton a = new JoystickButton(drive, 1);
 		a.whenPressed(new Fire());
 		JoystickButton b = new JoystickButton(drive, 2);
-		b.whenPressed(new StartWheels());
+		b.whileHeld(new StartWheels());
 		JoystickButton y = new JoystickButton(drive, 4);
-		y.whenPressed(new StopWheels());
+		y.whenPressed(new CancelVision());
 		
 	}
 	
